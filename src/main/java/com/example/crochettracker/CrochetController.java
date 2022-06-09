@@ -7,18 +7,19 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"https://crochet-tracker-gl7dtbm7qq-nw.a.run.app"})
+@CrossOrigin(origins = {"https://crochet-tracker-gl7dtbm7qq-nw.a.run.app","http://localhost:3002"})
 public class CrochetController {
 
     @Autowired
     CrochetRepository crochetRepository;
 
-    @CrossOrigin
+
     @GetMapping("/crochet")
     public String getCrochet () {
         return "getting crochet projects";
     }
 
+    @CrossOrigin
     @GetMapping("/crochet/projects")
     public List<CrochetProject> getCrochetProjects () {
         return crochetRepository.findAll();
