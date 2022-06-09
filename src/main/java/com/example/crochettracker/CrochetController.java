@@ -13,6 +13,7 @@ public class CrochetController {
     @Autowired
     CrochetRepository crochetRepository;
 
+    @CrossOrigin
     @GetMapping("/crochet")
     public String getCrochet () {
         return "getting crochet projects";
