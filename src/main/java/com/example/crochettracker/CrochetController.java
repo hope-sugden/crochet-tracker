@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"https://crochet-tracker-gl7dtbm7qq-nw.a.run.app","http://localhost:3002"})
+@CrossOrigin(origins = {"https://crochet-tracker-gl7dtbm7qq-nw.a.run.app","http://localhost:3002","http://localhost:3000"})
 public class CrochetController {
 
     @Autowired
