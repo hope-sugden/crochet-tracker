@@ -32,11 +32,11 @@ public class CrochetController {
         return "Crochet project saved okay";
     }
 
-    @DeleteMapping("/crochet/{crochetId}")
+    @DeleteMapping("/crochet/{projectId}")
     @Transactional
-    public String deleteCrochetProject(@PathVariable int crochetId) {
-        System.out.println("crochet project = " + crochetId);
-        int deleted = this.crochetRepository.deleteCrochetProjectByProjectId(crochetId);
+    public String deleteCrochetProject(@PathVariable int projectId) {
+        System.out.println("crochet project = " + projectId);
+        int deleted = this.crochetRepository.deleteCrochetProjectByProjectId(projectId);
         if (deleted > 0) {
             return "Crochet project removed okay";
         }
