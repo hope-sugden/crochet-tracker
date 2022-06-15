@@ -25,7 +25,14 @@ public class CrochetController {
         return crochetRepository.findAll();
     }
 
-    @PostMapping("/crochet/projects")
+    @PostMapping("/crochet/projects/{projectId}")
+    public String changeCrochetProject (@RequestBody CrochetProject text) {
+        this.crochetRepository.save(text);
+        System.out.println("Updated " + text);
+        return "Crochet project updated okay";
+    }
+
+    @PutMapping("/crochet/projects")
     public String addCrochetProject (@RequestBody CrochetProject text) {
         this.crochetRepository.save(text);
         System.out.println("Added " + text);
